@@ -2,7 +2,6 @@ package com.example.atividade01
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -27,19 +26,19 @@ class Atividade003 : MainActivity() {
             true
         }
         R.id.func4 ->{
-            Toast.makeText(this, "Atividade 04", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,Atividade004::class.java))
             true
         }
         R.id.func5 ->{
-            Toast.makeText(this, "Atividade 05", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,Atividade005::class.java))
             true
         }
         R.id.func6 ->{
-            Toast.makeText(this, "Atividade 06", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,Atividade006::class.java))
             true
         }
         R.id.func7 ->{
-            Toast.makeText(this, "Atividade 07", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this,Atividade007::class.java))
             true
         }
         else -> {
