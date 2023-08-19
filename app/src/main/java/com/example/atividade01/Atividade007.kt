@@ -2,13 +2,12 @@ package com.example.atividade01
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 
-class Atividade007 : AppCompatActivity() {
+class Atividade007 : MainActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         R.id.darkMode -> {
@@ -48,7 +47,7 @@ class Atividade007 : AppCompatActivity() {
         }
     }
     override fun onPrepareOptionsMenu(menu: Menu): Boolean {
-        val menuItemToHide = menu.findItem(R.id.func5)
+        val menuItemToHide = menu.findItem(R.id.func7)
         menuItemToHide?.isVisible = false
 
         return super.onPrepareOptionsMenu(menu)
