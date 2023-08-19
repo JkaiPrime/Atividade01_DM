@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/darkMode"
+
+        app:showAsAction="always"
+        android:icon="@drawable/dark_mode"/>
+    <item
+        android:id="@+id/lightMode"
+        app:showAsAction="always"
+        android:icon="@drawable/light_mode"/>
+    <item
+        android:id="@+id/func1"
+        android:title="Atividade 01" />
+    <item
+        android:id="@+id/func2"
+        android:title="Atividade 02" />
+    <item
+        android:id="@+id/func3"
+        android:title="Atividade 03" />
+    <item
+        android:id="@+id/func4"
+        android:title="Atividade 04" />
+    <item
+        android:id="@+id/func5"
+        android:title="Atividade 05" />
+    <item
+        android:id="@+id/func6"
+        android:title="Atividade 06" />
+    <item
+        android:id="@+id/func7"
+        android:title="Atividade 07" />
+</menu>
