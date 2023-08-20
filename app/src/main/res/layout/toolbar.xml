@@ -4,7 +4,7 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#C8EFB3"
+    android:background="#2545E1"
     app:title="Atividade 01"
     app:navigationIcon="@drawable/voltar"
     app:menu="@menu/main_menu">

@@ -1,21 +1,24 @@
 package com.example.atividade01
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
+
 
 class Atividade006 : MainActivity() {
-    @SuppressLint("MissingInflatedId")
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
-        R.id.darkMode -> {
-            Toast.makeText(this, "Dark Mode", Toast.LENGTH_LONG).show()
+        R.id.dark_mode -> {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             true
         }
-        R.id.lightMode->{
-            Toast.makeText(this, "Light Mode", Toast.LENGTH_SHORT).show()
+        R.id.light_Mode->{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             true
         }
         R.id.func1 -> {
@@ -52,9 +55,34 @@ class Atividade006 : MainActivity() {
 
         return super.onPrepareOptionsMenu(menu)
     }
+    private lateinit var edtGrau:TextView
+    private lateinit var btn:Button
+    private lateinit var message:TextView
+    private fun validar(): Boolean {
+        if (edtGrau.text.isEmpty()){
+            Toast.makeText(this, "Não é possivel fazer o calculo com campos em branco", Toast.LENGTH_SHORT).show()
+            edtGrau.text = ""
+            return true
+        }
+        return false
+    }
+    private fun calcular(){
+        val farenheit = ((edtGrau.text.toString().toInt() * 1.8) + 32).toInt()
+        message.text = "Farenheit : $farenheit"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_atividade006)
         setSupportActionBar(findViewById(R.id.toolbar))
+        edtGrau=findViewById(R.id.Atv06Grau)
+        btn=findViewById(R.id.Atv06Btn)
+        message=findViewById(R.id.Atv06Message)
+        btn.setOnClickListener {
+            if (validar()){
+
+            }else{
+                calcular()
+            }
+        }
     }
 }

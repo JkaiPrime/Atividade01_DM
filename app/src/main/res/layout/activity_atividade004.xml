@@ -5,6 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Atividade004">
-    <include layout="@layout/toobar"/>
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <EditText
+        android:id="@+id/Atv04Kilometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Kilometragem"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_margin="45dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/Atv04Litro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        android:hint="Litros"
+        android:layout_margin="45dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/Atv04Kilometro"
+        app:layout_constraintStart_toStartOf="@+id/Atv04Kilometro"
+        app:layout_constraintTop_toBottomOf="@+id/Atv04Kilometro" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Atv04Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_button"
+        android:text="Calcular"
+        android:layout_margin="45dp"
+        app:layout_constraintEnd_toEndOf="@+id/Atv04Litro"
+        app:layout_constraintStart_toStartOf="@+id/Atv04Litro"
+        app:layout_constraintTop_toBottomOf="@+id/Atv04Litro" />
+
+    <TextView
+        android:id="@+id/Atv04Message"
+        android:layout_width="200dp"
+        android:layout_height="90dp"
+        android:layout_margin="40dp"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/Atv04Btn"
+        app:layout_constraintStart_toStartOf="@+id/Atv04Btn"
+        app:layout_constraintTop_toBottomOf="@+id/Atv04Btn" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Atividade 04"
+        android:textSize="20sp"
+        android:textColor="#2545E1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

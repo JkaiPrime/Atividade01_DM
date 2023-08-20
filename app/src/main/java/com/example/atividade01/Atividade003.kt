@@ -1,20 +1,22 @@
 package com.example.atividade01
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 
 class Atividade003 : MainActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
-        R.id.darkMode -> {
-            Toast.makeText(this, "Dark Mode", Toast.LENGTH_LONG).show()
+        R.id.dark_mode -> {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             true
         }
-        R.id.lightMode->{
-            Toast.makeText(this, "Light Mode", Toast.LENGTH_SHORT).show()
+        R.id.light_Mode->{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             true
         }
         R.id.func1 -> {
@@ -51,10 +53,40 @@ class Atividade003 : MainActivity() {
 
         return super.onPrepareOptionsMenu(menu)
     }
-    @SuppressLint("MissingInflatedId")
+    private lateinit var edtAno:TextView
+    private lateinit var btn:Button
+    private lateinit var message:TextView
+
+    private fun validar():Boolean{
+        if(edtAno.text.isEmpty()){
+            Toast.makeText(this, "Não é possivel fazer o calculo com campos em branco", Toast.LENGTH_SHORT).show()
+            edtAno.text = ""
+            return true
+        }else if (edtAno.text.toString().toInt() < 1900 || edtAno.text.toString().toInt() >2023){
+            Toast.makeText(this, "Ano Invalido\n Não é premitido ano abaixo de 1900 e acima de 2023", Toast.LENGTH_SHORT).show()
+            edtAno.text = ""
+            return true
+        }
+        return false
+    }
+    private fun calcular(){
+        val idade = 2023 - edtAno.text.toString().toInt()
+        message.text = "Idade: $idade"
+        edtAno.text = ""
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_atividade003)
         setSupportActionBar(findViewById(R.id.toolbar))
+        edtAno = findViewById(R.id.Atv03Ano)
+        btn = findViewById(R.id.Atv03Btn)
+        message = findViewById(R.id.Atv03Message)
+        btn.setOnClickListener {
+            if(validar()){
+
+            }else{
+                calcular()
+            }
+        }
     }
 }

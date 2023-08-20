@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/darkMode"
+        android:id="@+id/dark_mode"
 
         app:showAsAction="always"
-        android:icon="@drawable/dark_mode"/>
+        android:icon="@drawable/dark_mode"
+        tools:ignore="MenuTitle" />
     <item
-        android:id="@+id/lightMode"
+        android:id="@+id/light_Mode"
         app:showAsAction="always"
-        android:icon="@drawable/light_mode"/>
+        android:icon="@drawable/light_mode"
+        tools:ignore="MenuTitle" />
     <item
         android:id="@+id/func1"
         android:title="Atividade 01" />

@@ -1,14 +1,11 @@
 package com.example.atividade01
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
-import android.widget.Toast
-import android.widget.Toolbar
+import androidx.appcompat.app.AppCompatDelegate
 
 open class MainActivity : AppCompatActivity() {
 
@@ -17,12 +14,12 @@ open class MainActivity : AppCompatActivity() {
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
-        R.id.darkMode -> {
-            Toast.makeText(this, "Dark Mode", Toast.LENGTH_LONG).show()
+        R.id.dark_mode -> {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             true
         }
-        R.id.lightMode->{
-            Toast.makeText(this, "Light Mode", Toast.LENGTH_SHORT).show()
+        R.id.light_Mode->{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             true
         }
         R.id.func1 -> {

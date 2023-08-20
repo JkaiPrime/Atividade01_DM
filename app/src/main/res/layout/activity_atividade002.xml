@@ -5,5 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Atividade002">
-    <include layout="@layout/toobar"/>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <EditText
+        android:id="@+id/Atv02Altura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="13dp"
+        android:hint="Altura"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/Atv02Largura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Largura"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_margin="45dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/Atv02Altura"
+        app:layout_constraintStart_toStartOf="@+id/Atv02Altura"
+        app:layout_constraintTop_toBottomOf="@+id/Atv02Altura" />
+
+    <EditText
+        android:id="@+id/Atv02Comprimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Comprimento"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_margin="45dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/Atv02Largura"
+        app:layout_constraintStart_toStartOf="@+id/Atv02Largura"
+        app:layout_constraintTop_toBottomOf="@+id/Atv02Largura" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Atv02Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="45dp"
+        android:text="Calcular"
+        android:background="@drawable/background_button"
+        app:layout_constraintEnd_toEndOf="@+id/Atv02Comprimento"
+        app:layout_constraintStart_toStartOf="@+id/Atv02Comprimento"
+        app:layout_constraintTop_toBottomOf="@+id/Atv02Comprimento" />
+
+    <TextView
+        android:id="@+id/Atv02Message"
+        android:layout_width="220dp"
+        android:layout_height="150dp"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/Atv02Btn"
+        app:layout_constraintStart_toStartOf="@+id/Atv02Btn"
+        app:layout_constraintTop_toBottomOf="@+id/Atv02Btn" />
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Atividade 02"
+        android:textSize="20sp"
+        android:textColor="#2545E1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
