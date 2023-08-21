@@ -15,7 +15,7 @@
         android:layout_margin="45dp"
         android:ems="10"
         android:hint="Digite o raio da base da lata"
-        android:inputType="numberDecimal"
+        android:inputType="numberSigned|numberDecimal"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
         android:hint="digite a altura da lata"
         android:layout_margin="45dp"
         android:padding="10dp"
-        android:inputType="numberDecimal"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintEnd_toEndOf="@+id/Atv07RaioBase"
         app:layout_constraintStart_toStartOf="@+id/Atv07RaioBase"
         app:layout_constraintTop_toBottomOf="@+id/Atv07RaioBase" />
