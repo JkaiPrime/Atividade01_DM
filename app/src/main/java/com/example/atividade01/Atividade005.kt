@@ -74,6 +74,17 @@ class Atividade005 : MainActivity() {
             edtNota3.text = ""
             edtNota4.text = ""
             return true
+        }else if(edtNota1.text.toString().toDouble() >0 ||edtNota2.text.toString().toDouble() <10.0 ||edtNota3.text.toString().toDouble() >10.0 ||edtNota4.text.toString().toDouble() <0) {
+            Toast.makeText(
+                this,
+                "Não é possivel fazer o calculo com um dos campos com numero maior que 10",
+                Toast.LENGTH_SHORT
+            ).show()
+            edtNota2.text = ""
+            edtNota1.text = ""
+            edtNota3.text = ""
+            edtNota4.text = ""
+            return true
         }
         return false
     }

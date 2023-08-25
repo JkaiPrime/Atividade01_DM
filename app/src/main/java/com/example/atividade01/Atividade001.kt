@@ -66,8 +66,13 @@ class Atividade001 : MainActivity() {
             edtPorcentagem.text = ""
             return true
 
-        }else if(edtSalario.text.toString().toDouble()<=0.0||edtPorcentagem.text.toString().toDouble()<= 0.0){
-            Toast.makeText(this, "Não é possivel fazer o calculo com um dos campos com numero negativo ou zero", Toast.LENGTH_SHORT).show()
+        }else if(edtSalario.text.toString().toDouble()<0.0||edtPorcentagem.text.toString().toDouble()< 0.0){
+            Toast.makeText(this, "Não é possivel fazer o calculo com um dos campos com numero negativo", Toast.LENGTH_SHORT).show()
+            edtSalario.text = ""
+            edtPorcentagem.text = ""
+            return true
+        }else if (edtSalario.text.toString().toDouble() == 0.0||edtPorcentagem.text.toString().toDouble() == 0.0){
+            Toast.makeText(this, "Não é possivel fazer o calculo com um dos campos com zero", Toast.LENGTH_SHORT).show()
             edtSalario.text = ""
             edtPorcentagem.text = ""
             return true
